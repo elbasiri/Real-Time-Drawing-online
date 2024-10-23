@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Drawing Board</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="auth-container">
+        <div id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="showRegister()">Register</button>
+        </div>
+        
+        <div id="register-form" style="display: none;">
+            <h2>Register</h2>
+            <input type="text" id="reg-username" placeholder="Username">
+            <input type="password" id="reg-password" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <button onclick="showLogin()">Back to Login</button>
+        </div>
+    </div>
+
+    <div id="drawing-container" style="display: none;">
+        <div id="toolbar">
+            <input type="color" id="color-picker" value="#000000">
+            <input type="range" id="brush-size" min="1" max="2" value="1">
+            <button onclick="clearCanvas()">Clear</button>
+            <button onclick="logout()">Logout</button>
+            <span id="current-user"></span>
+        </div>
+        <canvas id="drawing-board"></canvas>
+        <div id="cursors-container"></div>
+    </div>
+
+    <script src="/js/socket-client.js"></script>
+    <script src="/js/draw.js"></script>
+</body>
+</html>

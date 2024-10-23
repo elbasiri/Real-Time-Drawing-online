@@ -1,0 +1,26 @@
+{
+  "name": "crazy-idea",
+  "version": "1.0.0",
+  "description": "App reakl-time drawing",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Real-time",
+    "app"
+  ],
+  "author": "Othman El Basiri",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.7.1",
+    "socket.io": "^4.8.0"
+  }
+}
